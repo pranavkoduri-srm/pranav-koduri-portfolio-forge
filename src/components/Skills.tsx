@@ -1,4 +1,20 @@
 
+const SkillCard = ({ title, skills }: { title: string; skills: string[] }) => (
+  <div className="glass-card rounded-xl p-6 space-y-4">
+    <h3 className="text-xl font-semibold text-center text-primary">{title}</h3>
+    <div className="flex flex-wrap gap-2 justify-center">
+      {skills.map((skill, index) => (
+        <span
+          key={index}
+          className="bg-secondary px-4 py-2 rounded-full text-sm font-medium"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
+);
+
 const Skills = () => {
   const skillsData = [
     {
@@ -68,4 +84,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
