@@ -1,6 +1,7 @@
 
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
 import AnimatedBackground from './AnimatedBackground';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -37,6 +38,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                  aria-label="GitHub"
                 >
                   <Github size={20} />
                 </a>
@@ -45,18 +47,35 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                  aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
+                </a>
+                <a
+                  href="https://www.instagram.com/pranav0100/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
                 </a>
               </div>
             </div>
           </div>
           
           <div className="md:col-span-2 flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary glass-card">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/50 flex items-center justify-center text-4xl font-bold text-primary-foreground">
-                PK
-              </div>
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden border-4 border-primary rounded-full glass-card">
+              <Avatar className="w-full h-full">
+                <AvatarImage
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"
+                  alt="Pranav Koduri"
+                  className="object-cover w-full h-full"
+                />
+                <AvatarFallback className="bg-gradient-to-br from-primary/20 to-primary/50 flex items-center justify-center text-4xl font-bold text-primary-foreground">
+                  PK
+                </AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>

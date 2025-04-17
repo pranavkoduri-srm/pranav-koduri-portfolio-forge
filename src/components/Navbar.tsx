@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,6 +25,24 @@ const Navbar = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
+  ];
+
+  const socialLinks = [
+    { 
+      name: "GitHub", 
+      href: "https://github.com/Pranavkoduri895",
+      icon: Github 
+    },
+    { 
+      name: "LinkedIn", 
+      href: "https://www.linkedin.com/in/pranav-koduri-b9b3a12b8",
+      icon: Linkedin 
+    },
+    { 
+      name: "Instagram", 
+      href: "https://www.instagram.com/pranav0100/",
+      icon: Instagram 
+    }
   ];
 
   return (
@@ -55,6 +74,20 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              <div className="ml-4 flex items-center space-x-2">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-primary p-2 rounded-full transition-colors"
+                    aria-label={link.name}
+                  >
+                    <link.icon size={18} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <div className="md:hidden flex items-center">
@@ -89,6 +122,20 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
+          <div className="flex items-center space-x-2 px-3 py-2">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary p-2 rounded-full transition-colors"
+                aria-label={link.name}
+              >
+                <link.icon size={18} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
