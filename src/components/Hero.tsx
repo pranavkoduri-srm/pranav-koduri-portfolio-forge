@@ -68,7 +68,7 @@ const Hero = () => {
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden border-4 border-primary rounded-full glass-card">
               <Avatar className="w-full h-full">
                 <AvatarImage
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"
+                  src="/lovable-uploads/ff06387d-2ce4-4f42-b101-3df5ce70ad2d.png"
                   alt="Pranav Koduri"
                   className="object-cover w-full h-full"
                 />
